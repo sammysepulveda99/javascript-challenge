@@ -63,25 +63,14 @@ function runEnter() {
         date.country === countryform ||
         date.shape === shapeform) ||
 
-// Filter with all values
-        (date.datetime === datetimeInput || 
-        date.city === cityInput ||
-        date.state === countryInput ||
-        date.country === inputCountry ||
-        date.shape === shapeInput) 
-
-        );
-
-    //  Showin an empty table
-    tbody.html("");
-
-
+    
     filteredData.forEach(function(element) {
         var row = tbody.append("tr");
         Object.entries(element).forEach(([key,value]) => {
             row.append("td").text(value);
         })
-    });
+    })
+
+    )}
+
     //I give up :( 
-    
-  }
